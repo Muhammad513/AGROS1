@@ -1,0 +1,39 @@
+<div class="table-responsive d-lg-md-none">
+
+<table id="br1" class="table-bordered table table-sm  text-center  table-dark table-hover text-light ">
+    <thead>
+      <tr style="line-height: 17px;" class="text-info">
+        <th >ID</th>
+        <th >САНА</th>
+        <th>ТЕРИМ ТУРИ</th>
+        <th >Бригада <br> №</th>
+        <th>СОРТ</th>
+        <th>Класс</th>
+        <th>СОФ ВАЗНИ<br>(КГ)</th>
+        <th>ИФЛОСЛИК<br>(%)</th>
+        <th>ХИСОБИЙ ВАЗНИ<br>(КГ)</th>
+        <th>НАМЛИК<br>(%)</th>
+        <th>КОНДИЦИОН ВАЗНИ<br>(КГ)</th>
+        <th>КАБУЛ МАСКАНИ<br>(КГ)</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%  for i in info %}
+        <tr>
+            <td>{{ i.id}}</td>
+            <td>{{i.date|date:"d.m.Y"}}</td>
+            <td>КУЛ</td>
+            <td>{{ i.brigada}}</td>
+            <td>1</td>
+            <td>1</td>
+            <td>{{ i.sofVazn }}</td>
+            <td>{{ i.ifloslik}}</td>
+            <td>{{ i.xisobi}}</td>
+            <td>{{ i.namlik}}</td>
+            <td>{{ i.kond}}</td>
+            <td>{{ i.punkt}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+</table>
+</div>  

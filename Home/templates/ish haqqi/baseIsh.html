@@ -1,0 +1,84 @@
+{% extends "home/home.html" %}
+{% block head %}
+
+
+{% endblock %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <form action="" method="get">
+            <div class="ui form">
+                <div class="three fields">
+                  <div class="field">
+                    <label>Бригада №</label>
+                    <input type="text" name="staff" placeholder="First Name">
+                  </div>
+                  <div class="field">
+                    <label>Middle name</label>
+                    <input type="number" name="ranges" placeholder="First Name">
+                  </div>
+                  <div class="field">
+                    <label>Middle name</label>
+                    <input type="submit" value="submit">
+                  </div>  
+                  
+                </div>
+              </div>
+        </form>
+    </div>
+    <div class="col-12">
+        <div class="table-responsive-xl-md-12">
+            <table class="table table table-lg table-dark">
+                <thead class="text-center">
+                    <tr style="line-height: 17px;">
+                    <th >№</th>
+                    <th>Ф И О</th>
+                    <th class="text-center">Бригдадир <br> Ф И Ш</th>
+                    <th>Майдони  <br>(ГА)</th>
+                    <th>Режа <br>(ТН)</th>
+                    <th>Бир кунда<br>(ТН)</th>
+                    <th>Мавсумда<br>(ТН)</th>
+                    <th>Скидка<br>(ТН)</th>
+                    <th>Центнер <br>(Ц)</th>
+                    <th>Бажарилиш<br>(%)</th>
+                    </tr>
+                </thead>
+                <tbody >
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            {% for p in ranges %}
+                            <div class="ui form pb-2">
+                                <div class="field ">
+                                    <select class="ui search dropdown inverted">
+                                        {% for i in staff %}
+                                        <option value="{{i.staff}}" name="staff">{{i.first_name}}{{i.last_name  }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div> 
+                            {% endfor %}    
+                        </td>
+                    </tr>
+                </tbody>        
+            </table>        
+        </div> 
+    </div>
+</div>     
+                   
+            
+
+    
+{% endblock %}
+{% block main %}
+              
+
+{% endblock %}
+
+
+
+{% block js %}
+
+{% endblock %}

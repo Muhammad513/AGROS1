@@ -1,0 +1,93 @@
+<div class="table-responsive d-lg-md-none">
+
+    <table  class="table-bordered table table-sm  text-center  table-dark table-hover text-light " style="line-height:13px ;">
+      <thead style="line-height:20px ;">
+            <tr style="line-height: 22px;" class="text-info">
+            <th rowspan="2" style="text-align:inherit;">Бригада <br> №</th>
+            <th rowspan="2">&nbsp;М&nbsp;а&nbsp;с&nbsp;с&nbsp;и&nbsp;в&nbsp;</th>
+            <th rowspan="2" class="text-center">Б&nbsp;р&nbsp;и&nbsp;г&nbsp;д&nbsp;а&nbsp;д&nbsp;и&nbsp;р&nbsp; <br>&nbsp; Ф&nbsp; И&nbsp; Ш&nbsp;</th>
+            <th rowspan="2">МАЙДОН (ГА)</th>
+            <th colspan="3">&nbsp;Ч&nbsp;И&nbsp;Г&nbsp;И&nbsp;Т&nbsp; &nbsp;&nbsp;Э&nbsp;К&nbsp;И&nbsp;Л&nbsp;Г&nbsp;А&nbsp;Н&nbsp;&nbsp; М&nbsp;А&nbsp;Й&nbsp;Д&nbsp;О&nbsp;Н&nbsp;&nbsp;  ( &nbsp;Г&nbsp;А&nbsp; )</th>
+            
+            </tr>
+            <tr class="text-info">
+            <td style="color:wheat ;">&nbsp;Б&nbsp;и&nbsp;р&nbsp; к&nbsp;у&nbsp;н&nbsp;д&nbsp;а&nbsp; <br> (&nbsp;Г&nbsp;А&nbsp;)</td>
+            <td>&nbsp;М&nbsp;а&nbsp;в&nbsp;с&nbsp;у&nbsp;м&nbsp;д&nbsp;а&nbsp; <br> (&nbsp;Г&nbsp;А&nbsp;)</td>
+            <td>&nbsp;К&nbsp;О&nbsp;Л&nbsp;Д&nbsp;И&nbsp;К&nbsp; <br> (&nbsp;Г&nbsp;А&nbsp;)</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i,j in h_1_R1  %}
+            <tr>
+                <td class="">{{i.br_num}}</td>
+                <td class="">{{i.massiv__name}}</td>
+                <td class="" style="text-align: left;">{{i.br_full_name}}</td>
+                <td class="ch_gektar_1">{{i.P_gektar}}</td>
+                <td class="ch_b_1" style="color:wheat ;" >{{j.birkunda}}</td>
+                <td class="ch_m_1">{{i.miqdor}}</td>
+                {% if i.qoldiq < 0 %}
+                <td style="color: red;" class="ch_q_1">{{i.qoldiq}}</td>
+                {% else %}
+                <td class="ch_q_1">{{i.qoldiq}}</td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+            <tr class="text-info">
+            <td>АГРАНОМ:</td>
+            <td colspan="2" style="text-align: left;" >{{agranom1}}</td>
+            <td id="chsum1"></td>
+            <td id="chsum2"></td>
+            <td id="chsum3"></td>
+            <td id="chsum4"></td>
+            </tr>
+            {% for i,j in h_2_R1  %}
+            <tr>
+                <td class="">{{i.br_num}}</td>
+                <td class="">{{i.massiv__name}}</td>
+                <td class="" style="text-align: left;">{{i.br_full_name}}</td>
+                <td class="ch_gektar_2">{{i.P_gektar}}</td>
+                <td class="ch_b_2" style="color:wheat ;" >{{j.birkunda}}</td>
+                <td class="ch_m_2">{{i.miqdor}}</td>
+                <td class="ch_q_2">{{i.qoldiq}}</td>
+            </tr>
+            {% endfor %}
+            <tr class="text-info">
+            <td>АГРАНОМ:</td>
+            <td colspan="2" style="text-align: left;" >{{agranom2}}</td>
+            <td id="chsum5"></td>
+            <td id="chsum6"></td>
+            <td id="chsum7"></td>
+            <td id="chsum8"></td>
+            </tr>
+            {% for i,j in h_3_R1  %}
+            <tr>
+                <td class="">{{i.br_num}}</td>
+                <td class="">{{i.massiv__name}}</td>
+                <td class="" style="text-align: left;">{{i.br_full_name}}</td>
+                <td class="ch_gektar_3">{{i.P_gektar}}</td>
+                <td class="ch_b_3" style="color:wheat ;">{{j.birkunda}}</td>
+                <td class="ch_m_3">{{i.miqdor}}</td>
+                <td class="ch_q_3">{{i.qoldiq}}</td>
+            </tr>
+            {% endfor %}
+            <tr class="text-info">
+            <td>АГРАНОМ:</td>
+            <td colspan="2" style="text-align: left;" >{{agranom3}}</td>
+            <td id="chsum9"></td>
+            <td id="chsum10"></td>
+            <td id="chsum11"></td>
+            <td id="chsum12"></td>
+            </tr>
+            </tr>
+    
+            <tr class="text-info" style="font-size: 18px; font-weight: 900;">
+            <td colspan="3"  >А&nbsp;Г&nbsp;Р&nbsp;О&nbsp;М&nbsp;А&nbsp;К&nbsp;С&nbsp; &nbsp;&nbsp;МЧЖ  &nbsp;Б&nbsp;У&nbsp;Й&nbsp;И&nbsp;Ч&nbsp;А&nbsp;</td>
+            <td id="chsum13"></td>
+            <td id="chsum14"></td>
+            <td id="chsum15"></td>
+            <td id="chsum16"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+  

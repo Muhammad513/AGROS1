@@ -1,0 +1,270 @@
+
+<div class="table-responsive d-lg-md-none">
+
+    <table  class="table-bordered table table-sm  text-center  table-dark table-hover text-light " style="line-height:13px ;">
+      <thead style="line-height:20px ;">
+        <tr style="line-height: 22px;" class="text-warning">
+            <th rowspan="2">Бригада <br> №</th>
+            <th rowspan="2">Массив</th>
+            <th rowspan="2" class="text-center">Бригдадир <br> Ф И Ш</th>
+            <th rowspan="2">Майдони  <br>(ГА)</th>
+            <th rowspan="2" style="color:wheat ;">Бир кунда <br>(ГА)</th>
+            <th colspan="12" style="width:500px ;">Г&nbsp;А&nbsp;Л&nbsp;Л&nbsp;А&nbsp;&nbsp; С&nbsp;У&nbsp;В&nbsp;И&nbsp;  (&nbsp;Г&nbsp;E&nbsp;K&nbsp;T&nbsp;A&nbsp;Р&nbsp;)</th>
+        </tr>
+        <tr style="line-height:30px ;" class="text-warning">
+            <th >1-сув</th>
+            <th >Колдик</th>
+            <th >2-сув</th>
+            <th >Колдик</th>
+            <th >3-сув</th>
+            <th >Колдик</th>
+            <th >4-сув</th>
+            <th >Колдик</th>
+            <th >5-сув</th>
+            <th >Колдик</th>
+            <th >6-сув</th>
+            <th >Колдик</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i,j in h_1_R15 %}
+        <tr>
+            <td>{{i.br_num|default_if_none:"0"}}</td>
+            <td>{{i.massiv__name|default_if_none:"0"}}</td>
+            <td style="text-align: left;">{{i.br_full_name|default_if_none:"0"}}</td>
+            <td class="g_s_gektar1">{{i.G_gektar|default_if_none:"0"}}</td>
+            <td class="g_b_1" style="color:wheat ;">{{j.birkunda|default_if_none:"0"|floatformat:1}}</td>
+            <td class="g_s_1_1">{{i.miqdor1|default_if_none:"0"|floatformat:1}}</td>
+            
+            {% if i.qoldiq1 < 0 %}
+            <td class="g_q_1_1" style="color: red;">{{i.qoldiq1|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_1_1">{{i.qoldiq1|default_if_none:"0"|floatformat:1}}</td>
+            {% endif %}
+            
+            <td class="g_s_2_1">{{i.miqdor2|default_if_none:"0"|floatformat:1}}</td>
+            
+            {% if i.qoldiq2 < 0 %}
+            <td class="g_q_2_1" style="color:red ;">{{i.qoldiq2|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_2_1">{{i.qoldiq2|default_if_none:"0"|floatformat:1}}</td>
+            {%endif%}
+            
+            <td class="g_s_3_1">{{i.miqdor3|default_if_none:"0"|floatformat:1}}</td>
+            
+            {% if i.qoldiq3 < 0 %}
+            <td class="g_q_3_1" style="color: red;">{{i.qoldiq3|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_3_1">{{i.qoldiq3|default_if_none:"0"|floatformat:1}}</td>
+            {% endif %}
+            
+            <td class="g_s_4_1">{{i.miqdor4|default_if_none:"0"|floatformat:1}}</td>
+            
+            {% if i.qoldiq4 < 0%}
+            <td class="g_q_4_1" style="color:red ;">{{i.qoldiq4|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_4_1" >{{i.qoldiq4|default_if_none:"0"|floatformat:1}}</td>
+            {% endif %}
+
+            <td class="g_s_5_1">{{i.miqdor5|default_if_none:"0"|floatformat:1}}</td>
+            
+            {% if i.qoldiq5 < 0 %}
+            <td class="g_q_5_1" style="color: red;">{{i.qoldiq5|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_5_1">{{i.qoldiq5|default_if_none:"0"|floatformat:1}}</td>
+            {% endif %}
+
+            <td class="g_s_6_1">{{i.miqdor6|default_if_none:"0"|floatformat:1}}</td>
+            {% if i.qoldiq6 < 0 %}
+            <td class="g_q_6_1" style="color: red;">{{i.qoldiq6|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_6_1">{{i.qoldiq6|default_if_none:"0"|floatformat:1}}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+       <tr class="text-warning" style="line-height:20px ; font-size: 16px; font-weight: 900;">
+          <td colspan="3" >{{agranom1}}</td>
+          <td id="sum1"></td>
+          <td id="sum2"></td>
+          <td id="sum3"></td>
+          <td id="sum4"></td>
+          <td id="sum5"></td>
+          <td id="sum6"></td>
+          <td id="sum7"></td>
+          <td id="sum8"></td>
+          <td id="sum9"></td>
+          <td id="sum10"></td>
+          <td id="sum11"></td>
+          <td id="sum12"></td>
+          <td id="sum13"></td>
+          <td id="sum14"></td>
+        </tr>
+        {% for i,j in h_2_R15 %}
+        <tr>
+            <td>{{i.br_num|default_if_none:"0"}}</td>
+            <td>{{i.massiv__name|default_if_none:"0"}}</td>
+            <td style="text-align: left;">{{i.br_full_name|default_if_none:"0"}}</td>
+            <td class="g_s_gektar2">{{i.G_gektar|default_if_none:"0"}}</td>
+            <td class="g_b_2" style="color:wheat ;">{{j.birkunda|default_if_none:"0"|floatformat:1}}</td>
+            <td class="g_s_1_2">{{i.miqdor1|default_if_none:"0"|floatformat:1}}</td>
+            
+            {% if i.qoldiq1 < 0 %}
+            <td class="g_q_1_2" style="color: red;">{{i.qoldiq1|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_1_2">{{i.qoldiq1|default_if_none:"0"|floatformat:1}}</td>
+            {% endif %}
+            
+            <td class="g_s_2_2">{{i.miqdor2|default_if_none:"0"|floatformat:1}}</td>
+            
+            {% if i.qoldiq2 < 0 %}
+            <td class="g_q_2_2" style="color:red ;">{{i.qoldiq2|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_2_2">{{i.qoldiq2|default_if_none:"0"|floatformat:1}}</td>
+            {%endif%}
+            
+            <td class="g_s_3_2">{{i.miqdor3|default_if_none:"0"|floatformat:1}}</td>
+            
+            {% if i.qoldiq3 < 0 %}
+            <td class="g_q_3_2" style="color: red;">{{i.qoldiq3|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_3_2">{{i.qoldiq3|default_if_none:"0"|floatformat:1}}</td>
+            {% endif %}
+            
+            <td class="g_s_4_2">{{i.miqdor4|default_if_none:"0"|floatformat:1}}</td>
+            
+            {% if i.qoldiq4 < 0%}
+            <td class="g_q_4_2" style="color:red ;">{{i.qoldiq4|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_4_2" >{{i.qoldiq4|default_if_none:"0"|floatformat:1}}</td>
+            {% endif %}
+
+            <td class="g_s_5_2">{{i.miqdor5|default_if_none:"0"|floatformat:1}}</td>
+            
+            {% if i.qoldiq5 < 0 %}
+            <td class="g_q_5_2" style="color: red;">{{i.qoldiq5|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_5_2">{{i.qoldiq5|default_if_none:"0"|floatformat:1}}</td>
+            {% endif %}
+
+            <td class="g_s_6_2">{{i.miqdor6|default_if_none:"0"|floatformat:1}}</td>
+            {% if i.qoldiq6 < 0 %}
+            <td class="g_q_6_2" style="color: red;">{{i.qoldiq6|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_6_2">{{i.qoldiq6|default_if_none:"0"|floatformat:1}}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+        <tr class="text-warning" style="line-height:20px ; font-size: 16px; font-weight: 900;">
+          <td colspan="3">{{agranom2}}</td>
+          <td id="sum15"></td>
+          <td id="sum16"></td>
+          <td id="sum17"></td>
+          <td id="sum18"></td>
+          <td id="sum19"></td>
+          <td id="sum20"></td>
+          <td id="sum21"></td>
+          <td id="sum22"></td>
+          <td id="sum23"></td>
+          <td id="sum24"></td>
+          <td id="sum25"></td>
+          <td id="sum26"></td>
+          <td id="sum27"></td>
+          <td id="sum28"></td>
+        </tr>
+        {% for i,j in h_3_R15 %}
+        <tr>
+            <td>{{i.br_num|default_if_none:"0"}}</td>
+            <td>{{i.massiv__name|default_if_none:"0"}}</td>
+            <td style="text-align: left;">{{i.br_full_name|default_if_none:"0"}}</td>
+            <td class="g_s_gektar3">{{i.G_gektar|default_if_none:"0"}}</td>
+            <td class="g_b_3" style="color:wheat ;">{{j.birkunda|default_if_none:"0"|floatformat:1}}</td>
+            <td class="g_s_1_3">{{i.miqdor1|default_if_none:"0"|floatformat:1}}</td>
+            
+            {% if i.qoldiq1 < 0 %}
+            <td class="g_q_1_3" style="color: red;">{{i.qoldiq1|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_1_3">{{i.qoldiq1|default_if_none:"0"|floatformat:1}}</td>
+            {% endif %}
+            
+            <td class="g_s_2_3">{{i.miqdor2|default_if_none:"0"|floatformat:1}}</td>
+            
+            {% if i.qoldiq2 < 0 %}
+            <td class="g_q_2_3" style="color:red ;">{{i.qoldiq2|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_2_3">{{i.qoldiq2|default_if_none:"0"|floatformat:1}}</td>
+            {%endif%}
+            
+            <td class="g_s_3_3">{{i.miqdor3|default_if_none:"0"|floatformat:1}}</td>
+            
+            {% if i.qoldiq3 < 0 %}
+            <td class="g_q_3_3" style="color: red;">{{i.qoldiq3|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_3_3">{{i.qoldiq3|default_if_none:"0"|floatformat:1}}</td>
+            {% endif %}
+            
+            <td class="g_s_4_3">{{i.miqdor4|default_if_none:"0"|floatformat:1}}</td>
+            
+            {% if i.qoldiq4 < 0%}
+            <td class="g_q_4_3" style="color:red ;">{{i.qoldiq4|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_4_3" >{{i.qoldiq4|default_if_none:"0"|floatformat:1}}</td>
+            {% endif %}
+
+            <td class="g_s_5_3">{{i.miqdor5|default_if_none:"0"|floatformat:1}}</td>
+            
+            {% if i.qoldiq5 < 0 %}
+            <td class="g_q_5_3" style="color: red;">{{i.qoldiq5|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_5_3">{{i.qoldiq5|default_if_none:"0"|floatformat:1}}</td>
+            {% endif %}
+
+            <td class="g_s_6_3">{{i.miqdor6|default_if_none:"0"|floatformat:1}}</td>
+            {% if i.qoldiq6 < 0 %}
+            <td class="g_q_6_3" style="color: red;">{{i.qoldiq6|default_if_none:"0"|floatformat:1}}</td>
+            {% else %}
+            <td class="g_q_6_3">{{i.qoldiq6|default_if_none:"0"|floatformat:1}}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+        <tr class="text-warning" style="line-height:20px ; font-size: 16px; font-weight: 900;">
+          <td colspan="3">{{agranom3}}</td>
+          <td id="sum29"></td>
+          <td id="sum30"></td>
+          <td id="sum31"></td>
+          <td id="sum32"></td>
+          <td id="sum33"></td>
+          <td id="sum34"></td>
+          <td id="sum35"></td>
+          <td id="sum36"></td>
+          <td id="sum37"></td>
+          <td id="sum38"></td>
+          <td id="sum39"></td>
+          <td id="sum40"></td>
+          <td id="sum41"></td>
+          <td id="sum42"></td>
+        </tr> 
+        <tr class="text-warning" style="line-height:20px ; font-size: 16px; font-weight: 900;">
+          <td colspan="3">AGROMAX MCH</td>
+          <td id="sum43"></td>
+          <td id="sum44"></td>
+          <td id="sum45"></td>
+          <td id="sum46"></td>
+          <td id="sum47"></td>
+          <td id="sum48"></td>
+          <td id="sum49"></td>
+          <td id="sum50"></td>
+          <td id="sum51"></td>
+          <td id="sum52"></td>
+          <td id="sum53"></td>
+          <td id="sum54"></td>
+          <td id="sum55"></td>
+          <td id="sum56"></td>
+        </tr>       
+        
+      </tbody>
+        <tfoot>
+          
+        </tfoot>
+      </table>
+  </div>
+  

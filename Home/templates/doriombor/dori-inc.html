@@ -1,0 +1,80 @@
+<div class="table-responsive d-lg-md-none">
+
+  <table  class="table-bordered table table-sm  text-center  table-dark table-hover text-light " style="line-height: 15px;">
+    <thead>
+      <tr style="line-height: 22px;" class="text-info">
+        <th rowspan="3" >№</th>
+        <th rowspan="3">Массив</th>
+        <th class="text-center" rowspan="3">Фермер хужалик <br>номи</th>
+        <th rowspan="3">Майдони  <br>(ГА)</th>
+        <th colspan="12">ТАРКАТИЛАДИГАН ДОРИ ВОСИТАЛАРИ</th>
+      </tr>
+      <tr style="line-height: 22px;" class="text-info">
+        <th colspan="4">АММАФОС</th>
+        <th colspan="4">КАРБАМИТ</th>
+        <th colspan="4">КАЛИЙ</th>
+      </tr> 
+      <tr>
+        <td style="color:wheat ;">Бир кунда</td>
+        <td>РЕЖА</td>
+        <td>ХАКИКАТДА</td>
+        <td>КОЛДИК</td>
+        <td style="color:wheat ;">Бир кунда</td>
+        <td>РЕЖА</td>
+        <td>ХАКИКАТДА</td>
+        <td>КОЛДИК</td>
+        <td style="color:wheat ;">Бир кунда</td>
+        <td>РЕЖА</td>
+        <td>ХАКИКАТДА</td>
+        <td>КОЛДИК</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in fx_dori %}
+      <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.massiv}}</td>
+        <td style="text-align:left ;">{{i.fx_name}}</td>
+        <td class="gektar">{{i.maydon}}</td>
+        <td class="birkunda1" style="color:wheat ;">{{i.date1}}</td>
+        <td class="amafos">{{i.amaf_reja}}</td>
+        <td class="miqdor1">{{i.miqdor1}}</td>
+        <td class="qoldiq1">{{i.qoldiq1}}</td>
+        <td class="birkunda2" style="color:wheat ;">{{i.date2}}</td>
+        <td class="karbamit" >{{i.karb_reja}}</td>
+        <td class="miqdor2">{{i.miqdor2}}</td>
+        <td class="qoldiq2">{{i.qoldiq2}}</td>
+        <td class="birkunda3" style="color:wheat ;">{{i.date3}}</td>
+        <td class="kali">{{i.kali_reja}}</td>
+        <td class="miqdor3" >{{i.miqdor3}}</td>
+        <td class="qoldiq3">{{i.qoldiq3}}</td>
+        
+      </tr>
+      {% endfor %}
+      
+    
+    </tbody>
+      <tfoot class="text-info">
+        <tr style="font-weight: 900;">
+         <td colspan="3"></td>
+          <td id="dor_sum1"></td>
+          <td id="dor_sum2"></td>
+          <td id="dor_sum3"></td>
+          <td id="dor_sum4"></td>
+          <td id="dor_sum5"></td>
+          <td id="dor_sum6"></td>
+          <td id="dor_sum7"></td>
+          <td id="dor_sum8"></td>
+          <td id="dor_sum9"></td>
+          <td id="dor_sum10"></td>
+          <td id="dor_sum11"></td>
+          <td id="dor_sum12"></td>
+          <td id="dor_sum13"></td>
+        </tr>
+      </tfoot>
+    </table>
+</div>
+
+
+
+

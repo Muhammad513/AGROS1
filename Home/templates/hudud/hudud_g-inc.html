@@ -1,0 +1,77 @@
+<div class="table-responsive d-lg-md-none pt-5">
+
+    <table  class="table-bordered table table-sm  text-center  table-dark table-hover text-light " style="line-height: 40px; font-size: 15px;">
+      <thead>
+        <tr style="line-height: 30px; font-size: 16px;" class="text-info">
+          <th >ХУДУД <br> №</th>
+          <th class="text-center">АГРАНОМ <br> Ф И Ш</th>
+          <th>Майдони  <br>(ГА)</th>
+          <th>Режа <br>(ТН)</th>
+          <th style="color: wheat;">Бир кунда<br>(ТН)</th>
+          <th>Мавсумда<br>(ТН)</th>
+          <th>Скидка<br>(ТН)</th>
+          <th>Центнер <br>(Ц)</th>
+          <th>Бажарилиш<br>(%)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%  for i,j in hudud_1 %}
+        <tr>
+          <td >{{i.h_num }}</td>
+          <td class="" style="text-align: left;" >{{i.Agranom_full_name}}</td>
+          <td class="gektar_agro">{{i.gektar_hudud|floatformat:2|default_if_none:"0"|floatformat:2}}</td>
+          <td class="reja_agro">{{i.reja_hudud|default_if_none:"0"|floatformat:2}}</td>
+          <td class="birkunda_agro" style="color: wheat;">{{j.birkunda|default_if_none:"0"|floatformat:2}}</td>
+          <td class="mavsumda_agro">{{i.hudud_sums|default_if_none:"0"|floatformat:2}}</td>
+          <td class="skidka_agro" >{{i.sums_skidka|default_if_none:"0"|floatformat:2}}</td>
+          <td class="sentner_agro">{{i.sent|default_if_none:"0"|floatformat:1}}</td>
+          <td class="bajarilish_agro">{{i.bajarilish|default_if_none:"0"|floatformat:1}}</td>
+        </tr>
+        {% endfor %}
+        
+        {%  for i,j in hudud_2 %}
+        <tr>
+          <td >{{i.h_num }}</td>
+          <td class="" style="text-align: left;" >{{i.Agranom_full_name}}</td>
+          <td class="gektar_agro">{{i.gektar_hudud|floatformat:2|default_if_none:"0"|floatformat:2}}</td>
+          <td class="reja_agro">{{i.reja_hudud|default_if_none:"0"|floatformat:2}}</td>
+          <td class="birkunda_agro" style="color: wheat;">{{j.birkunda|default_if_none:"0"|floatformat:2}}</td>
+          <td class="mavsumda_agro">{{i.hudud_sums|default_if_none:"0"|floatformat:2}}</td>
+          <td class="skidka_agro" >{{i.sums_skidka|default_if_none:"0"|floatformat:2}}</td>
+          <td class="sentner_agro">{{i.sent|default_if_none:"0"|floatformat:1}}</td>
+          <td class="bajarilish_agro">{{i.bajarilish|default_if_none:"0"|floatformat:1}}</td>
+        </tr>
+        {% endfor %}
+
+        {%  for i,j in hudud_3 %}
+        <tr>
+          <td >{{i.h_num }}</td>
+          <td class="" style="text-align: left;" >{{i.Agranom_full_name}}</td>
+          <td class="gektar_agro">{{i.gektar_hudud|floatformat:2|default_if_none:"0"|floatformat:2}}</td>
+          <td class="reja_agro">{{i.reja_hudud|default_if_none:"0"|floatformat:2}}</td>
+          <td class="birkunda_agro" style="color: wheat;">{{j.birkunda|default_if_none:"0"|floatformat:2}}</td>
+          <td class="mavsumda_agro">{{i.hudud_sums|default_if_none:"0"|floatformat:2}}</td>
+          <td class="skidka_agro" >{{i.sums_skidka|default_if_none:"0"|floatformat:2}}</td>
+          <td class="sentner_agro">{{i.sent|default_if_none:"0"|floatformat:1}}</td>
+          <td class="bajarilish_agro">{{i.bajarilish|default_if_none:"0"|floatformat:1}}</td>
+        </tr>
+        {% endfor %}
+          
+        
+        
+        </tbody>
+        <tfoot class="text-info">
+          <tr style="font-weight: 900;">
+            <td colspan="2" class="center aligned">&nbsp;А&nbsp;Г&nbsp;Р&nbsp;О&nbsp;М&nbsp;А&nbsp;К&nbsp;С&nbsp;&nbsp;&nbsp; Б&nbsp;У&nbsp;Й&nbsp;И&nbsp;Ч&nbsp;А&nbsp;</td>
+            <td id="agro_sum1"></td>
+            <td id="agro_sum2"></td>
+            <td style="color:wheat ;" id="agro_sum3"></td>
+            <td id="agro_sum4"></td>
+            <td id="agro_sum5"></td>
+            <td id="agro_sum6"></td>
+            <td id="agro_sum7"></td>
+          </tr>
+        </tfoot>
+      </table>
+  </div>
+  
